@@ -1,0 +1,251 @@
+
+@font-face{
+    src: url(/fonts/Merriweather-Light.ttf);
+    font-family: merri;
+}
+
+@font-face{
+    src: url(/fonts/SourceSansPro-Regular.ttf);
+    font-family: source;
+}
+
+body{
+    width: 80%;
+    margin: auto;
+    padding: 0;
+}
+
+#homepage{
+    width: 100%;
+    height: 100vh;
+    margin: 0px auto;
+    background-color: #8C8773;
+}
+
+.hp-areas{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-areas: 
+        "bradley bradley . main-nav"
+        "bradley bradley logo ."
+        "bradley bradley title title"
+        "bradley bradley title title";  
+    width: 100%;
+    height: 100vh;
+    margin: auto;  
+}
+
+.bradley{
+    grid-area: bradley;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+}
+
+.logo{
+    grid-area: logo;
+    height: 200px;
+    height: 200px;
+    margin: 20px 30px;
+}
+
+.main-nav{
+    grid-area: main-nav;
+    float: right;
+}
+
+.main-nav ul{
+    list-style: none;
+}
+
+.main-nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.title{
+    grid-area: title;
+    font-family: merri;
+    margin:  20px 30px;
+    font-size: 100px;    
+}
+
+.page-title{
+    font-family: merri;
+    text-align: center;
+    font-size: 50px;
+    margin: 10px 0;
+}
+
+.page-nav{
+    width: 80%;
+    margin: auto;
+    align-content: center;
+}
+
+.page-nav ul{
+    list-style: none;
+}
+
+.page-nav ul li a{
+    text-decoration: none;
+    color: black;    
+    padding: 0 20px;
+    font-family: source;
+    font-size: 20px;
+}
+
+.page-nav ul li a:hover{
+    color: #8C8773;
+}
+
+#tattoo-gallery{
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.tattoo-grid{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+        "tattoo1 tattoo1 tattoo2 tattoo3"
+        "tattoo1 tattoo1 tattoo4 tattoo5";
+    width: 80%;
+    height: 80%;
+    grid-gap: 5px;
+    margin: auto;
+}
+
+.tattoo1{
+    grid-area: tattoo1;
+    width: 100%;
+    height: 100%;
+}
+
+.tattoo2{
+    grid-area: tattoo2;
+    width: 100%;
+    height: 100%;
+}
+
+.tattoo3{
+    grid-area: tattoo3;
+    width: 100%;
+    height: 100%;
+}
+
+.tattoo4{
+    grid-area: tattoo4;
+    width: 100%;
+    height: 100%;
+}
+
+.tattoo5{
+    grid-area: tattoo5;
+    width: 100%;
+    height: 100%;
+}
+
+#art-gallery{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    background-color: #8C8773;
+}
+
+.art-grid{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+        "art1 art1 art2 art3"
+        "art1 art1 art4 art5";
+    width: 80%;
+    height: 80%;
+    grid-gap: 5px;
+    margin: auto;
+}
+
+.art1{
+    grid-area: art1;
+    width: 100%;
+    height: 100%;
+}
+
+.art2{
+    grid-area: art2;
+    width: 100%;
+    height: 100%;
+}
+
+.art3{
+    grid-area: art3;
+    width: 100%;
+    height: 100%;
+}
+
+.art4{
+    grid-area: art4;
+    width: 100%;
+    height: 100%;
+}
+
+.art5{
+    grid-area: art5;
+    width: 100%;
+    height: 100%;
+}
+
+
+#about{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+}
+
+.about-grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 75%;
+    grid-template-areas:
+        "bradley2 about-subtitle"
+        "bradley2 about-blurb";
+    width: 80%;
+    grid-gap: 10px;
+    margin: 20px auto;
+}
+
+.bradley2{
+    grid-area: bradley2;
+    width: 100%;
+    margin: 0;
+}
+
+.about-subtitle{
+    grid-area: about-subtitle;
+    font-family: merri;
+    font-size: 40px;
+}
+
+.about-blurb{
+    grid-area: about-blurb;
+    font-family: source;
+    font-size: 30px;
+}
+
+#faq{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    background-color: #8C8773;
+}
+
+#contact{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+}
+
