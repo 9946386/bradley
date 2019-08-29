@@ -10,7 +10,7 @@
 }
 
 body{
-    width: 80%;
+    width: 100%;
     margin: auto;
     padding: 0;
 }
@@ -73,15 +73,22 @@ body{
 
 .page-title{
     font-family: merri;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
     font-size: 50px;
-    margin: 10px 0;
+    padding: 70px 0;
+    margin: 0;
 }
 
 .page-nav{
-    width: 80%;
+    width: 100%;
     margin: auto;
-    align-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
 }
 
 .page-nav ul{
@@ -91,13 +98,13 @@ body{
 .page-nav ul li a{
     text-decoration: none;
     color: black;    
-    padding: 0 20px;
+    padding: 0 40px;
     font-family: source;
     font-size: 20px;
 }
 
 .page-nav ul li a:hover{
-    color: #8C8773;
+    color:#444;
 }
 
 #tattoo-gallery{
@@ -113,8 +120,8 @@ body{
     grid-template-areas: 
         "tattoo1 tattoo1 tattoo2 tattoo3"
         "tattoo1 tattoo1 tattoo4 tattoo5";
-    width: 80%;
-    height: 80%;
+    width: 50%;
+    height: 50%;
     grid-gap: 5px;
     margin: auto;
 }
@@ -163,8 +170,8 @@ body{
     grid-template-areas: 
         "art1 art1 art2 art3"
         "art1 art1 art4 art5";
-    width: 80%;
-    height: 80%;
+    width: 50%;
+    height: 50%;
     grid-gap: 5px;
     margin: auto;
 }
@@ -208,20 +215,21 @@ body{
 
 .about-grid{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 35% 65%;
     grid-template-rows: 25% 75%;
     grid-template-areas:
         "bradley2 about-subtitle"
         "bradley2 about-blurb";
-    width: 80%;
+    width: 60%;
     grid-gap: 10px;
-    margin: 20px auto;
+    margin: 30px auto;
 }
 
 .bradley2{
     grid-area: bradley2;
+    height: 100%;
     width: 100%;
-    margin: 0;
+    justify-self: flex-end;
 }
 
 .about-subtitle{
@@ -234,6 +242,7 @@ body{
     grid-area: about-blurb;
     font-family: source;
     font-size: 30px;
+    margin: 0;
 }
 
 #faq{
@@ -243,9 +252,88 @@ body{
     background-color: #8C8773;
 }
 
+.faq-container{
+    width: 80%;
+    margin: auto;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.accordian{
+    background-color:#8C8773;
+    cursor: pointer;
+    width: 50%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-family: merri;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.accordian::after{
+    content: '\02795';
+    font-size: 15px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:active{
+    content: "\2796";
+}
+
+.active, .accordian:hover{
+    background-color: #747061;
+}
+
+.panel{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    font-family: source;
+    font-size: 20px;
+    padding: 5px 20px;
+}
+
 #contact{
     width: 100%;
     height: 100vh;
+    margin: auto;
+}
+
+.contact-container{
+    width: 50%;
+    margin: auto;
+    text-align: center;  
+}
+
+.contact-container h3{
+    font-family: merri;
+    font-size: 20px;
+}
+
+.contact-container p{
+    font-family: source;
+    font-size: 20px;
+}
+
+.footer{
+    max-height: 50vh;
+    margin: 20vh 0 0 0;
+    background-color: #8C8773;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+}
+
+.footer img{
+    width: 30vh;
+    padding: 10vh;
     margin: auto;
 }
 

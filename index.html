@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/styles/styles.css">
     <title>Bosch Bradley</title>
 </head>
@@ -29,18 +30,20 @@
         </div>
     </div>
 
-    <div id="tattoo-gallery">
-        <div class="page-nav">
-            <ul>
-                <li>
-                    <a href="#homepage">Home</a>
-                    <a href="#art-gallery">Art Gallery</a>
-                    <a href="#about">About</a>
-                    <a href="#faq">FAQ</a>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
+    <div class="page-nav">
+        <ul>
+            <li>
+                <a href="#homepage">Home</a>
+                <a href="#tattoo-gallery">Tattoo Gallery</a>
+                <a href="#art-gallery">Art Gallery</a>
+                <a href="#about">About</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="tattoo-gallery">        
         <h2 class="page-title">Tattoo Gallery</h2>
 
         <div class="tattoo-grid">
@@ -54,77 +57,114 @@
     </div>
 
     <div id="art-gallery">
-        <div class="page-nav">
-            <ul>
-                <li>
-                    <a href="#homepage">Home</a>
-                    <a href="#tatoo-gallery">Tattoo Gallery</a>
-                    <a href="#about">About</a>
-                    <a href="#faq">FAQ</a>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
         <h2 class="page-title">Art Gallery</h2>
 
         <div class="art-grid">
-            <img src="/images/art/art1.PNG" alt="art1" class="art1">
-            <img src="/images/art/art2.PNG" alt="art2" class="art2">
-            <img src="/images/art/art3.PNG" alt="art3" class="art3">
-            <img src="/images/art/art4.PNG" alt="art4" class="art4">
-            <img src="/images/art/art5.JPG" alt="art5" class="art5">
+            <img src="images/art/art1.PNG" alt="art1" class="art1">
+            <img src="images/art/art2.PNG" alt="art2" class="art2">
+            <img src="images/art/art3.PNG" alt="art3" class="art3">
+            <img src="images/art/art4.PNG" alt="art4" class="art4">
+            <img src="images/art/art5.JPG" alt="art5" class="art5">
         </div>
     </div>
 
     <div id="about">
-        <div class="page-nav">
-            <ul>
-                <li>
-                    <a href="#homepage">Home</a>
-                    <a href="#tattoo-gallery">Tattoo Gallery</a>
-                    <a href="#art-galler">Art Gallery</a>
-                    <a href="#faq">FAQ</a>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
         <h2 class="page-title">Abouth the Tatooist</h2>
 
         <div class="about-grid">
-            <img src="/images/bradley.PNG" alt="Bradley" class="bradley2">
+            <img src="images/bradley.PNG" alt="Bradley" class="bradley2">
             <h3 class="about-subtitle">Bradley</h3>
-            <p class="about-blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis placeat omnis magni possimus inventore sunt consequatur non. Deserunt harum error doloribus architecto odio sint facere deleniti fuga facilis labore aliquam, atque veritatis totam! Vel totam vitae veritatis ipsa! Veritatis veniam totam ipsum inventore eveniet libero sint ipsam vel fugit adipisci.</p>
+            <p class="about-blurb">I have been tattooing for 7 years. <br><br>Located in Bay of Plenty/Waikato<br><br>Exploring a variety of blackwork styles in the pursuit to further develop my own.</p>
         </div>
     </div>
 
     <div id="faq">
-        <div class="page-nav">
-            <ul>
-                <li>
-                    <a href="#homepage">Home</a>
-                    <a href="#tattoo-gallery">Tattoo Gallery</a>
-                    <a href="#art-gallery">Art Gallery</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
         <h2 class="page-title">Frequently Asked Questions</h2>
+
+        <div class="faq-container">
+                <button class="accordian">How do I book an appointment?</button>
+                <div class="panel">
+                    <p>Contact Bradley via email or Instagram</p>
+                </div>
+
+                <button class="accordian">How much does a tattoo cost?</button>
+                <div class="panel">
+                    <p>We charge an hourly rate and the cost depends entirely on the tattoo size, detail etc.</p>
+                </div>   
+                
+                <button class="accordian">Does a tattoo require a deposit?</button>
+                <div class="panel">
+                    <p>No</p>
+                </div>
+
+                <button class="accordian">Can you tell me a price over the phone?</button>
+                <div class="panel">
+                    <p>No</p>
+                </div> 
+                
+                <button class="accordian">What forms of payment do you accept?</button>
+                <div class="panel">
+                    <p>Cash or bank tranfer</p>
+                </div> 
+
+                <button class="accordian">Can I bring my own image?</button>
+                <div class="panel">
+                    <p>You can provide references which can be used during the design process as the artist only tattoos custom designs</p>
+                </div> 
+
+                <button class="accordian">Can you cover up a tattoo?</button>
+                <div class="panel">
+                    <p>Yes, a consult is required to determine what can be done</p>
+                </div> 
+
+                <button class="accordian">Can you fix another artist's work?</button>
+                <div class="panel">
+                    <p>I prefer not to but it can be discussed</p>
+                </div> 
+
+                <button class="accordian">Do you tattoo minors?</button>
+                <div class="panel">
+                    <p>You must be 18 to be tattooed</p>
+                </div> 
+
+                <button class="accordian">Is it safe to get a tattoo?</button>
+                <div class="panel">
+                    <p>Yes, in a clean and sterile environment</p>
+                </div> 
+        </div>
+
+        <script>
+                var acc = document.getElementsByClassName("accordian");
+                var i;
+                
+                for (i = 0; i < acc.length; i++) {
+                  acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight){
+                      panel.style.maxHeight = null;
+                    } else {
+                      panel.style.maxHeight = panel.scrollHeight + "px";
+                    } 
+                  });
+                }
+                </script>
+
     </div>
 
     <div id="contact">
-        <div class="page-nav">
-            <ul>
-                <li>
-                    <a href="#homepage">Home</a>
-                    <a href="#tattoo-gallery">Tattoo Gallery</a>
-                    <a href="#art-gallery">Art Gallery</a>
-                    <a href="#about">About</a>
-                    <a href="#faq">FAQ</a>
-                </li>
-            </ul>
-        </div>
         <h2 class="page-title">Contact</h2>
+
+        <div class="contact-container">
+            <h3>Email:</h3>
+            <p><i class="icon ion-md-mail"></i> boschbradleytattoo@gmail.com</p>
+            <h3>Instagram:</h3>
+            <p><i class="icon ion-logo-instagram"></i> www.instagram.com/bosch_bradley</p>
+        </div>
+
+        <div class="footer">
+            <img src="images/logo.png" alt="Logo">
+        </div>
     </div>    
 </body>
 </html>
