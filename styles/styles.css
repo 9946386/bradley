@@ -9,8 +9,28 @@
     font-family: source;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(125deg, rgb(73, 71, 64), #8C8773);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-track
+{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
 body{
-    width: 100%;
+    width: 80%;
     margin: auto;
     padding: 0;
 }
@@ -28,12 +48,13 @@ body{
     grid-template-rows: 25% 25% 25% 25%;
     grid-template-areas: 
         "bradley bradley . main-nav"
-        "bradley bradley logo ."
+        "bradley bradley logo main-nav"
         "bradley bradley title title"
         "bradley bradley title title";  
     width: 100%;
     height: 100vh;
     margin: auto;  
+    
 }
 
 .bradley{
@@ -45,30 +66,50 @@ body{
 
 .logo{
     grid-area: logo;
-    height: 200px;
-    height: 200px;
-    margin: 20px 30px;
+    height: 30vh;
+    margin: 0 20px;
+}
+
+.nav-wrapper{
+    position: relative;
+}
+
+.nav-button{
+    will-change: transform;
+    display: flex;
 }
 
 .main-nav{
     grid-area: main-nav;
     float: right;
+    font-family: source;
+    font-size: 4vh;
+    text-align: right;
+    padding-right: 20px;
 }
 
 .main-nav ul{
     list-style: none;
 }
 
-.main-nav ul li a{
+.main-nav ul li{
     text-decoration: none;
+}
+
+.main-nav ul li a{
     color: black;
+    text-decoration: none;
+}
+
+.main-nav ul li a:hover{
+    color: white;
 }
 
 .title{
     grid-area: title;
     font-family: merri;
-    margin:  20px 30px;
-    font-size: 100px;    
+    font-size: 10vh; 
+    margin-left: 20px;   
 }
 
 .page-title{
@@ -76,12 +117,13 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center; 
-    font-size: 50px;
-    padding: 70px 0;
+    font-size: 6vh;
+    padding: 70px 0 20px 0;
     margin: 0;
 }
 
 .page-nav{
+    background-color: rgba(255, 255, 255, 0.5);
     width: 100%;
     margin: auto;
     display: flex;
@@ -113,6 +155,14 @@ body{
     margin: 0 auto;
 }
 
+.gallery-container{
+    width: 80%;
+    height: 70vh;    
+    overflow: hidden;
+    overflow-y: scroll;
+    margin: auto;    
+}
+
 .tattoo-grid{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -120,10 +170,25 @@ body{
     grid-template-areas: 
         "tattoo1 tattoo1 tattoo2 tattoo3"
         "tattoo1 tattoo1 tattoo4 tattoo5";
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
+    grid-gap: 5px;
+    margin: auto;    
+    padding-top: 10px;
+}
+
+.tattoo-grid2{
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+        "tattoo1 tattoo2 tattoo3"
+        "tattoo4 tattoo5 tattoo3";
+    width: 100%;
+    height: 100%;
     grid-gap: 5px;
     margin: auto;
+    padding-top: 10px;
 }
 
 .tattoo1{
@@ -170,10 +235,24 @@ body{
     grid-template-areas: 
         "art1 art1 art2 art3"
         "art1 art1 art4 art5";
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
     grid-gap: 5px;
     margin: auto;
+}
+
+.art-grid2{
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+        "art1 art2 art3 art3"
+        "art4 art5 art3 art3";
+    width: 100%;
+    height: 100%;
+    grid-gap: 5px;
+    margin: auto;
+    padding-top: 10px;
 }
 
 .art1{
@@ -206,7 +285,6 @@ body{
     height: 100%;
 }
 
-
 #about{
     width: 100%;
     height: 100vh;
@@ -222,12 +300,12 @@ body{
         "bradley2 about-blurb";
     width: 60%;
     grid-gap: 10px;
-    margin: 30px auto;
+    margin: auto;
 }
 
 .bradley2{
     grid-area: bradley2;
-    height: 100%;
+    height: auto;
     width: 100%;
     justify-self: flex-end;
 }
@@ -235,13 +313,13 @@ body{
 .about-subtitle{
     grid-area: about-subtitle;
     font-family: merri;
-    font-size: 40px;
+    font-size: 5vh;
 }
 
 .about-blurb{
     grid-area: about-blurb;
     font-family: source;
-    font-size: 30px;
+    font-size: 4vhpx;
     margin: 0;
 }
 
@@ -253,37 +331,38 @@ body{
 }
 
 .faq-container{
-    width: 80%;
+    width: 50%;
+    max-height: 70vh;
     margin: auto;
     align-content: center;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
 .accordian{
     background-color:#8C8773;
     cursor: pointer;
-    width: 50%;
+    width: 100%;
     text-align: left;
     border: none;
     outline: none;
     transition: 0.4s;
     font-family: merri;
-    font-size: 20px;
+    font-size: 15px;
     padding: 10px;
 }
 
 .accordian::after{
     content: '\02795';
-    font-size: 15px;
-    color: white;
+    font-size: 10px;
+    color: black;
     float: right;
     margin-left: 5px;
 }
 
-.active:active{
+.active::after{
     content: "\2796";
+    color: black;
 }
 
 .active, .accordian:hover{
@@ -295,7 +374,7 @@ body{
     overflow: hidden;
     transition: max-height 0.4s ease-out;
     font-family: source;
-    font-size: 20px;
+    font-size: 14px;
     padding: 5px 20px;
 }
 
@@ -322,8 +401,8 @@ body{
 }
 
 .footer{
-    max-height: 50vh;
-    margin: 20vh 0 0 0;
+    height: 40vh;
+    margin: 10vh 0 0 0;
     background-color: #8C8773;
     align-content: center;
     display: flex;
@@ -332,8 +411,7 @@ body{
 }
 
 .footer img{
-    width: 30vh;
-    padding: 10vh;
+    width: 20vh;
     margin: auto;
 }
 
