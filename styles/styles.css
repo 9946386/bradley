@@ -17,7 +17,6 @@ html{
     width: 12px;
 }
 
-
 ::-webkit-scrollbar-thumb{
     background: linear-gradient(125deg, rgb(73, 71, 64), #8C8773);
     border-radius: 3px;
@@ -33,6 +32,7 @@ body{
     width: 80%;
     margin: auto;
     padding: 0;
+    background-color: rgb(240, 239, 239);
 }
 
 #homepage{
@@ -53,8 +53,7 @@ body{
         "bradley bradley title title";  
     width: 100%;
     height: 100vh;
-    margin: auto;  
-    
+    margin: auto;      
 }
 
 .bradley{
@@ -66,24 +65,15 @@ body{
 
 .logo{
     grid-area: logo;
-    height: 30vh;
-    margin: 0 20px;
-}
-
-.nav-wrapper{
-    position: relative;
-}
-
-.nav-button{
-    will-change: transform;
-    display: flex;
+    width: 13vw;
+    margin: 0 2vw;
 }
 
 .main-nav{
     grid-area: main-nav;
     float: right;
     font-family: source;
-    font-size: 4vh;
+    font-size: 2vw;
     text-align: right;
     padding-right: 20px;
 }
@@ -103,13 +93,14 @@ body{
 
 .main-nav ul li a:hover{
     color: white;
+    opacity: 0.5;
 }
 
 .title{
     grid-area: title;
     font-family: merri;
-    font-size: 10vh; 
-    margin-left: 20px;   
+    font-size: 5vw;
+    margin: 3vw 0 0 2vw;   
 }
 
 .page-title{
@@ -117,13 +108,13 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center; 
-    font-size: 6vh;
-    padding: 70px 0 20px 0;
+    font-size: 3vw;
+    padding: 10vh 0 5vh 0;
     margin: 0;
 }
 
 .page-nav{
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(240, 239, 239, 0.5);
     width: 100%;
     margin: auto;
     display: flex;
@@ -140,9 +131,9 @@ body{
 .page-nav ul li a{
     text-decoration: none;
     color: black;    
-    padding: 0 40px;
+    padding: 0 3vw;
     font-family: source;
-    font-size: 20px;
+    font-size: 1.5vw;
 }
 
 .page-nav ul li a:hover{
@@ -156,7 +147,7 @@ body{
 }
 
 .gallery-container{
-    width: 80%;
+    width: 60vw;
     height: 70vh;    
     overflow: hidden;
     overflow-y: scroll;
@@ -172,9 +163,8 @@ body{
         "tattoo1 tattoo1 tattoo4 tattoo5";
     width: 100%;
     height: 100%;
-    grid-gap: 5px;
-    margin: auto;    
-    padding-top: 10px;
+    grid-gap: .3vw;
+    margin: auto;
 }
 
 .tattoo-grid2{
@@ -186,9 +176,10 @@ body{
         "tattoo4 tattoo5 tattoo3";
     width: 100%;
     height: 100%;
-    grid-gap: 5px;
-    margin: auto;
-    padding-top: 10px;
+    grid-gap: .3vw;
+    margin: auto;    
+    padding-top: 1.2vh;
+    padding-bottom: 1.2vh;
 }
 
 .tattoo1{
@@ -237,7 +228,7 @@ body{
         "art1 art1 art4 art5";
     width: 100%;
     height: 100%;
-    grid-gap: 5px;
+    grid-gap: .3vw;
     margin: auto;
 }
 
@@ -246,13 +237,14 @@ body{
     grid-template-columns: 25% 25% 50%;
     grid-template-rows: 50% 50%;
     grid-template-areas: 
-        "art1 art2 art3 art3"
-        "art4 art5 art3 art3";
+        "art1 art2 art3"
+        "art4 art5 art3";
     width: 100%;
     height: 100%;
-    grid-gap: 5px;
+    grid-gap: .3vw;
     margin: auto;
-    padding-top: 10px;
+    padding-top: 1.2vh;
+    padding-bottom: 1.2vw;
 }
 
 .art1{
@@ -300,7 +292,7 @@ body{
         "bradley2 about-blurb";
     width: 60%;
     grid-gap: 10px;
-    margin: auto;
+    margin: 8vh auto;
 }
 
 .bradley2{
@@ -313,13 +305,14 @@ body{
 .about-subtitle{
     grid-area: about-subtitle;
     font-family: merri;
-    font-size: 5vh;
+    font-size: 2.5vw;
+    margin: 0 0 4vh 0;
 }
 
 .about-blurb{
     grid-area: about-blurb;
     font-family: source;
-    font-size: 4vhpx;
+    font-size: 1.5vw;
     margin: 0;
 }
 
@@ -348,13 +341,13 @@ body{
     outline: none;
     transition: 0.4s;
     font-family: merri;
-    font-size: 15px;
+    font-size: 1vw;
     padding: 10px;
 }
 
 .accordian::after{
     content: '\02795';
-    font-size: 10px;
+    font-size: .5vw;
     color: black;
     float: right;
     margin-left: 5px;
@@ -374,7 +367,7 @@ body{
     overflow: hidden;
     transition: max-height 0.4s ease-out;
     font-family: source;
-    font-size: 14px;
+    font-size: 1vw;
     padding: 5px 20px;
 }
 
